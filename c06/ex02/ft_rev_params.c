@@ -22,7 +22,7 @@ int	main(int ac, char **ag)
 	while (i != 1)
 	{
 		ft_rev_programs(ag[i]);
-		write(1, " ", 1);
+		write(1, "\n", 1);
 		i--;
 	}
 	return (0);
