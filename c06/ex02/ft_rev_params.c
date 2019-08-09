@@ -16,10 +16,10 @@ int	main(int ac, char **ag)
 {
 	int i;
 
-	i = 0;
+	i = 1;
 	while (i != ac)
 		i++;
-	while (i != 0)
+	while (i != 1)
 	{
 		ft_rev_programs(ag[i]);
 		write(1, " ", 1);
