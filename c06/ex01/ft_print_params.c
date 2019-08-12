@@ -1,6 +1,19 @@
+/* ************************************************************************** */
+/*                                                          LE - /            */
+/*                                                              /             */
+/*   ft_print_params.c                                .::    .:/ .      .::   */
+/*                                                 +:+:+   +:    +:  +:+:+    */
+/*   By: jacens <marvin@le-101.fr>                  +:+   +:    +:    +:+     */
+/*                                                 #+#   #+    #+    #+#      */
+/*   Created: 2019/08/10 13:12:26 by jacens       #+#   ##    ##    #+#       */
+/*   Updated: 2019/08/10 13:12:29 by jacens      ###    #+. /#+    ###.fr     */
+/*                                                         /                  */
+/*                                                        /                   */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
-void	ft_print_program_name(char *str)
+void	ft_print_programs(char *str)
 {
 	int i;
 
@@ -19,7 +32,7 @@ int	main(int ac, char **ag)
 	i = 1;
 	while (i != ac)
 	{
-		ft_print_program_name(ag[i]);
+		ft_print_programs(ag[i]);
 		write(1, "\n", 1);
 		i++;
 	}

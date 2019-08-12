@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_iterative_power.c                             .::    .:/ .      .::   */
+/*   ft_backtrack.c                                   .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: jacens <marvin@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/08/08 17:04:16 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/08/08 17:04:17 by jacens      ###    #+. /#+    ###.fr     */
+/*   Created: 2019/08/11 16:16:59 by jacens       #+#   ##    ##    #+#       */
+/*   Updated: 2019/08/11 16:17:03 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-void	ft_power(int nb, int *nb2)
+int		ab_row(int x, int y, char **grille, int test)
 {
-	*nb2 *= nb;
+
 }
 
-int		ft_iterative_power(int nb, int power)
+int		ab_col(int x, int y, char **grille, int test)
 {
-	int i;
-	int nb2;
 
-	i = 1;
-	nb2 = nb;
-	if (power == 0)
-		return (1);
-	if (power < 0 || nb == 0)
-		return (0);
-	while (i != power)
-	{
-		ft_power(nb, &nb2);
-		i++;
-	}
-	return (nb2);
+}
+
+int		pos_row(int x, int y, char **grille)
+{
+
+}
+
+int		pos_col(int x, int y, char **grille)
+{
+
+}
+
+void		ft_backtack(int x, int y, char **grille)
+{
+
 }

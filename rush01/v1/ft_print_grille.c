@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_iterative_power.c                             .::    .:/ .      .::   */
+/*   ft_print_grille.c                                .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: jacens <marvin@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/08/08 17:04:16 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/08/08 17:04:17 by jacens      ###    #+. /#+    ###.fr     */
+/*   Created: 2019/08/11 16:18:17 by jacens       #+#   ##    ##    #+#       */
+/*   Updated: 2019/08/11 16:18:18 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-void	ft_power(int nb, int *nb2)
+void    ft_print_grille(char grille[4][4])
 {
-	*nb2 *= nb;
-}
+    int x;
+    int y;
 
-int		ft_iterative_power(int nb, int power)
-{
-	int i;
-	int nb2;
-
-	i = 1;
-	nb2 = nb;
-	if (power == 0)
-		return (1);
-	if (power < 0 || nb == 0)
-		return (0);
-	while (i != power)
-	{
-		ft_power(nb, &nb2);
-		i++;
-	}
-	return (nb2);
+    x = 0;
+    y = 0;
+    while (x != 4)
+    {
+        y = 0;
+        while (y != 4)
+        {
+            write(1, &grille[x][y], 1);
+            y++;
+        }
+        write(1, "\n", 1);
+        x++;
+    }
 }
