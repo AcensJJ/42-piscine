@@ -1,13 +1,36 @@
 #include <stdlib.h>
 
-int		ft_compte(char **strs)
+int		ft_strlen(char **strs)
 {
 	int i;
 
 	i = 0;
-	while (*strs[i] != '\0')
+	while (strs[i] != '\0')
 		i++;
 	return (i);
+}
+
+int		ft_strlensep(char **strs, char sep)
+{
+	int i;
+	int j;
+	int k;
+
+	i = 0;
+	j = 0;
+	while (strs[i] != '\0')
+	{
+		j = 0;
+		while (strs[i][k] != '\0')
+		{
+			j++;
+			k++;
+		}
+		i++;
+	}
+	i = 0;
+	while ()
+	return (k);
 }
 
 char 	*ft_strjoin(int size, char **strs, char sep)
