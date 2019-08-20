@@ -3,94 +3,76 @@
 /*                                                              /             */
 /*   rush01.c                                         .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: jacens <marvin@le-101.fr>                  +:+   +:    +:    +:+     */
+/*   By: gamichal <gamichal@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/08/03 10:16:34 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/08/03 11:56:27 by jacens      ###    #+. /#+    ###.fr     */
+/*   Created: 2019/08/03 13:40:47 by gamichal     #+#   ##    ##    #+#       */
+/*   Updated: 2019/08/03 19:54:12 by gamichal    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
+void	ft_putchar(char c);
+
+void	print_top(int x)
+{
+	int i;
+
+	i = x - 2;
+	ft_putchar('/');
+	while (i > 0)
+	{
+		ft_putchar('*');
+		--i;
+	}
+	if (x > 1)
+		ft_putchar(92);
+	ft_putchar('\n');
+}
+
+void	print_mid(int x, int y)
+{
+	int i;
+	int j;
+
+	i = x;
+	j = y - 2;
+	while (j > 0)
+	{
+		while (i > 0)
+		{
+			if (i == x || i == 1)
+				ft_putchar('*');
+			else
+				ft_putchar(' ');
+			--i;
+		}
+		i = x;
+		ft_putchar('\n');
+		--j;
+	}
+}
+
+void	print_bot(int x)
+{
+	int i;
+
+	i = x - 2;
+	ft_putchar(92);
+	while (i > 0)
+	{
+		ft_putchar('*');
+		--i;
+	}
+	if (x > 1)
+		ft_putchar('/');
+	ft_putchar('\n');
+}
+
 void	rush(int x, int y)
 {
-	int	a;
-	int	b;
-	int	c;
-	int	i;
-
-	a = A;
-	b = C;
-	c = B;
-	i = 0;
-
-	while ( i != y)
-	{	
-		if (i == 0)
-			ft_putchar_start(a, b, c, x);
-		else if (i == y)
-			ft_putchar_end(a, b, c, x);
-		else
-			ft_putchar_mid(c, x);
-		i++;
-	}
+	print_top(x);
+	if (y > 2)
+		print_mid(x, y);
+	if (y > 1)
+		print_bot(x);
 }
-
-void	ft_mid(int c, int x)
-{
-	int i;
-
-	i = 0;
-	while (i != x)
-	{
-		if (i == x)
-		{
-			ft_putchar(c);
-			break;
-		}
-		else if ( i == 0)
-			ft_putchar(c);
-		else
-			ft_putcahr(' ');
-		i++;
-	}
-}
-
-void	ft_putchar_start(int a, int b, int c, int x)
-{
-	int i;
-
-	i = 0;
-	while (i != x)
-	{
-	if (i == x)
-	{
-		ft_putchar(c);
-		break;
-	}
-	else if ( i == 0)
-		ft_putchar(a);
-	else
-		ft_putcahr(b);
-	i++;
-	}
-}
-
-void	ft_putchar_end(int a, int b, int c, int x)
-{
-	int i;
-
-	i = 0;
-	while (i != x)
-	{
-	if (i == x)
-	{
-		ft_putchar(c);
-		break;
-	}
-	else if ( i == 0)
-		ft_putchar(a);
-	else
-		putchar(b);
-		i++;
-	}
-}i

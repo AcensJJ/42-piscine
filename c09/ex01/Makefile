@@ -1,37 +1,31 @@
-SRCS		= ./srcs/ft_putchar.c \ 
-				./srcs/ft_swap.c \
-				./srcs/ft_putstr.c \
-				./srcs/ft_strlen.c \
-				./srcs/ft_strcmp.c
+NAME = libft.a
 
-INCLUDES	= ./includes/ft.h
+SRCS = srcs/ft_putchar.c srcs/ft_swap.c srcs/ft_putstr.c srcs/ft_strlen.c srcs/ft_strcmp.c
 
-OBJS		= ft_putchar.o \ 
-				ft_swap.o \
-				ft_putstr.o \
-				ft_strlen.o \
-				ft_strcmp.o
+INCLUDES = includes
 
-CC			= gcc
-RM			= rm -f
+OBJS = ${SRCS:.c=.o}
 
-CFLAGS		= -Wall -Wextra -Werror
+CC = gcc
 
-${NAME}:	${CC} ${CFLAGS} ${OBJS} -I ${INCLUDES}
-			ar rc libft.a ${OBJS} 
+RM = rm -f
 
-all :		${NAME}
+CFLAGS = -Wall -Wextra -Werror
 
-clean:
-			${RM} ./srcs/ft_putchar.o \ 
-				./srcs/ft_swap.o \
-				./srcs/ft_putstr.o \
-				./srcs/ft_strlen.o \
-				./srcs/ft_strcmp.o
+%.o : %.c
+		${CC} ${CFLAGS} -I ${INCLUDES} -c $< -o $@
 
-fclean:		clean
-			${RM} libft.a
+${NAME} : ${OBJS}
+		ar rcs $@ $^
 
-re:			fclean all
+all : ${NAME}
 
-.PHONY:		all clean fclean re
+clean :
+		${RM} ${OBJS}
+
+fclean : clean
+		${RM} ${NAME}
+
+re : fclean all
+
+.PHONY : all clean fclean re

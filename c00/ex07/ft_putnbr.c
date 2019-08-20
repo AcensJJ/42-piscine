@@ -1,0 +1,50 @@
+/* ************************************************************************** */
+/*                                                          LE - /            */
+/*                                                              /             */
+/*   ft_putnbr.c                                      .::    .:/ .      .::   */
+/*                                                 +:+:+   +:    +:  +:+:+    */
+/*   By: jacens <marvin@le-101.fr>                  +:+   +:    +:    +:+     */
+/*                                                 #+#   #+    #+    #+#      */
+/*   Created: 2019/08/04 16:34:03 by jacens       #+#   ##    ##    #+#       */
+/*   Updated: 2019/08/04 16:34:47 by jacens      ###    #+. /#+    ###.fr     */
+/*                                                         /                  */
+/*                                                        /                   */
+/* ************************************************************************** */
+
+#include <unistd.h>
+
+void	ft_print(char vtp)
+{
+	if (vtp != 0)
+		write(1, &vtp, 1);
+	else
+		write(1, "0", 1);
+}
+
+void	ft_putnbr(int nb)
+{
+	long long	n;
+	int			i;
+	long long	reste;
+	int			print;
+	char		vtp;
+
+	n = nb;
+	i = 10;
+	if (n < 0)
+	{
+		n *= -1;
+		write(1, "-", 1);
+	}
+	while (n >= i)
+		i *= 10;
+	while (i >= 10)
+	{
+		i /= 10;
+		reste = n % i;
+		print = (n - reste) / i;
+		vtp = print + 48;
+		ft_print(vtp);
+		n = reste;
+	}
+}

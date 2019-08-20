@@ -3,17 +3,17 @@
 /*                                                              /             */
 /*   ft_putchar.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: jacens <marvin@le-101.fr>                  +:+   +:    +:    +:+     */
+/*   By: gamichal <gamichal@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/08/03 10:18:24 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/08/03 10:58:51 by jacens      ###    #+. /#+    ###.fr     */
+/*   Created: 2019/08/03 00:34:21 by gamichal     #+#   ##    ##    #+#       */
+/*   Updated: 2019/08/03 13:44:53 by gamichal    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(int r)
+void	ft_putchar(char c)
 {
-	write(1 , &r, 1);
+	write(1, &c, 1);
 }
