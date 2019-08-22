@@ -1,0 +1,15 @@
+map/1000-map.00.txt: x = 117; y = 160; size = 129
+map/20-map.00.txt: x = 0; y = 1; size = 8
+map/2000-map.00.txt: x = 1235; y = 0; size = 96
+map/30-map.00.txt: x = 14; y = 18; size = 2
+map/35-map.00.txt: x = 16; y = 4; size = 8
+map/5-map.00.txt: x = 4; y = 4; size = 1
+map/5-map.02.txt: x = 2; y = 1; size = 2
+map/500-map.00.txt: x = 411; y = 265; size = 44
+map/500-map.01.txt: x = 24; y = 165; size = 23
+map/500-map.02.txt: x = 176; y = 327; size = 23
+map/500-map.03.txt: x = 393; y = 405; size = 23
+map/500-map.04.txt: x = 222; y = 152; size = 63
+map/500-map.05.txt: x = 98; y = 115; size = 62
+map/500-map.06.txt: x = 183; y = 362; size = 60
+map/9-map.00.txt: x = 4; y = 4; size = 5
