@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/08/21 16:08:17 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/08/22 11:49:12 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/08/22 18:08:38 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -18,7 +18,7 @@ int		ft_count_if(char **tab, int length, int (*f)(char*))
 
 	i = -1;
 	nb = 0;
-	while (*tab[++i] != '\0' && i <= length)
+	while (*tab[++i] != '\0' && i < length)
 		if (f(*tab[i]) != 0)
 			nb++;
 	return (nb);

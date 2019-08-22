@@ -1,10 +1,7 @@
 NAME = do-op
 
-SRCS = main.c\
-	   ft_atoi.c\
-	   ft_putnbr.c\
-	   ft_caract.c\
-	   ft_caract2.c
+SRCS = doop.c\
+	   ft_operator.c
 
 OBJS = $(SRCS:.c=.o)
 

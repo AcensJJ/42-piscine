@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_atoi.c                                        .::    .:/ .      .::   */
+/*   ft_operator.c                                    .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/08/07 18:57:16 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/08/22 13:32:06 by jacens      ###    #+. /#+    ###.fr     */
+/*   Created: 2019/08/22 18:05:10 by jacens       #+#   ##    ##    #+#       */
+/*   Updated: 2019/08/22 18:05:14 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "ft.h"
-
-int	ft_atoi(char *str)
+int		ft_addition(int a, int b)
 {
-	int signe;
-	int nb;
+	return (a + b);
+}
 
-	nb = 0;
-	signe = 1;
-	while ((*str >= 9 && *str <= 13) || *str == ' ')
-		++str;
-	while (*str == '+' || *str == '-')
-	{
-		if (*str == '-')
-			signe *= -1;
-		++str;
-	}
-	while (*str >= '0' && *str <= '9')
-	{
-		nb = nb * 10 + *str - '0';
-		++str;
-	}
-	return (nb * signe);
+int		ft_soustraction(int a, int b)
+{
+	return (a - b);
+}
+
+int		ft_division(int a, int b)
+{
+	return (a / b);
+}
+
+int		ft_multiplication(int a, int b)
+{
+	return (a * b);
+}
+
+int		ft_modulo(int a, int b)
+{
+	return (a % b);
 }
